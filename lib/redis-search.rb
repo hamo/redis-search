@@ -1,5 +1,9 @@
 # coding: utf-8
-require "redis/search/base"
+if defined?(Ohm)
+  require 'redis/search/base_ohm'
+else
+  require "redis/search/base"
+end
 require "redis/search/finder"
 require "redis/search/index"
 require "redis/search/config"
